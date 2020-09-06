@@ -84,6 +84,16 @@
                 </configuration>
             </plugin>
 
+            <!--  mvn dependency:copy-dependencies -->
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                    <excludeTransitive>false</excludeTransitive>
+                    <stripVersion>true</stripVersion>
+                </configuration>
+            </plugin>
+
         </plugins>
 
         <resources>
