@@ -7,9 +7,14 @@ import java.util.List;
 
 @Repository
 public interface UserMapper {
+
     User sel(int id);
 
     int add(User user);
 
     List<User> list();
+
+    int del(int id);
+
+    int update(User user);
 }

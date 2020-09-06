@@ -45,4 +45,15 @@ public class UserController {
     public int addUser(@RequestBody User user) {
         return userService.add(user);
     }
+
+    @DeleteMapping("deleteUser")
+    public int del(@RequestParam(value = "id") int id) {
+        return userService.del(id);
+    }
+
+    @PostMapping("updateUser")
+    public int update(@RequestBody User user) {
+        return userService.update(user);
+    }
+
 }

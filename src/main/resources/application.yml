@@ -8,6 +8,17 @@ spring:
     url: jdbc:mysql://localhost:3306/springboot-demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
     driver-class-name: com.mysql.jdbc.Driver
 
+  # Templates reloading during development=file:src/main/resources/templates/
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    cache: false
+
+  # Static resources reloading during development
+  resources:
+    static-locations: file:src/main/resources/static/
+
+
+
 mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
   type-aliases-package: com.zhizuqiu.demo.entity

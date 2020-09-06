@@ -28,4 +28,14 @@ public class UserService implements UserMapper {
     public List<User> list() {
         return userMapper.list();
     }
+
+    @Override
+    public int del(int id) {
+        return userMapper.del(id);
+    }
+
+    @Override
+    public int update(User user) {
+        return userMapper.update(user);
+    }
 }
